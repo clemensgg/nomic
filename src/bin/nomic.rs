@@ -1492,7 +1492,7 @@ impl GrpcCmd {
             // TODO: support configuring RPC address
             || nomic::app_client("http://localhost:26657").sub(|app| app.ibc.ctx),
             &GrpcOpts {
-                host: "127.0.0.1".to_string(),
+                host: "0.0.0.0".to_string(),
                 port: self.port,
                 chain_id: self.config.chain_id.clone().unwrap(),
             },
